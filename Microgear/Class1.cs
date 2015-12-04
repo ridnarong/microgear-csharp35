@@ -119,7 +119,7 @@ namespace Microgear
 
             this.mqtt_client.MqttMsgPublishReceived += HandleClientMqttMsgPublishReceived;
             this.mqtt_client.MqttMsgPublished += MqttMsgPublished;
-            this.mqtt_client.ConnectionClosed += ConnectionClosedEventHandler;
+            this.mqtt_client.MqttMsgDisconnected += ConnectionClosedEventHandler;
             this.mqtt_client.MqttMsgSubscribed += MqttMsgSubscribed;
             this.on_connect();
             foreach (string topic in this.subscribe_list)
